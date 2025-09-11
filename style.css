@@ -8,10 +8,10 @@ body.clair {
 }
 
 body.sombre {
-    color: white;
-    background-color: black;
+    color: rgb(220, 220, 220);
+    background-color: rgb(20, 20, 20);
 
     a, a:link, a:visited, a:focus, a:hover, a:active {
-        color: aqua;
+        color: rgb(0, 200, 200);
     }
 }
