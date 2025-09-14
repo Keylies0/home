@@ -11,7 +11,21 @@
         <a href="/home">PAGE D'ACCUEIL</a>
         <button id="btn_theme">Passer en thème <b id="autre_theme">sombre</b></button>
         <hr>
-        PAGE EN CONSTRUCTION...
+        PAGE EN CONSTRUCTION...<br>
+        <h1>Générateur de <i>one command</i></h1>
+        <p>
+            Ce générateur construit une seule et même commande capable d'éxecuter en un instant une multitude de commandes.
+            <br>
+            Taper les commandes à éxecuter dans les champs ci-dessous. La <i>one command</i> est générée tout en bas de la page.
+        </p>
+        <div>
+            <div><input type="checkbox"><input type="text" readonly="readonly" value="/gamerule commandBlockOutput false"></div>
+            <div><button>x</button><input type="text" value=""></div>
+            <div><button>x</button><input type="text" value=""></div>
+            <button>+</button>
+        </div>
+        <h2>La <i>one command</i> :</h2>
+        <input type="text" readonly="readonly" value="/summon minecraft:falling_block ~ ~1 ~ {BlockState:{Name:&quot;minecraft:redstone_block&quot;},Passengers:[{id:&quot;minecraft:falling_block&quot;,BlockState:{Name:&quot;minecraft:activator_rail&quot;}},{id:&quot;minecraft:command_block_minecart&quot;,Tags:[&quot;keyliesonecommand&quot;],Command:&quot;/gamerule commandBlockOutput false&quot;},{id:&quot;minecraft:command_block_minecart&quot;,Tags:[&quot;keyliesonecommand&quot;],Command:&quot;/setblock ~ ~-2 ~ minecraft:command_block{auto:1b,Command:\&quot;/fill ~ ~ ~ ~ ~2 ~ minecraft:air\&quot;} destroy&quot;},{id:&quot;minecraft:command_block_minecart&quot;,Tags:[&quot;keyliesonecommand&quot;],Command:&quot;/kill @e[tag=keyliesonecommand]&quot;}]}">
         <script src="/home/script.js"></script>
     </body>
 </html>
