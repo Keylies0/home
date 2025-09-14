@@ -14,7 +14,7 @@ function changer_theme() {
     }
 }
 
-if (localStorage.getItem("theme") != "clair" || localStorage.getItem("theme") != "sombre")
+if (localStorage.getItem("theme") != "clair" && localStorage.getItem("theme") != "sombre")
     localStorage.setItem("theme", "clair");
 else if (localStorage.getItem("theme") === "sombre") {
     document.body.className = "sombre";
