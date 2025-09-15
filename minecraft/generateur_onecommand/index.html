@@ -19,13 +19,14 @@
             Taper les commandes à éxecuter dans les champs ci-dessous. La <i>one command</i> est générée tout en bas de la page.
         </p>
         <div>
-            <div><input type="checkbox"><input type="text" readonly="readonly" value="/gamerule commandBlockOutput false"></div>
-            <div><button>x</button><input type="text" value=""></div>
-            <div><button>x</button><input type="text" value=""></div>
+            <div><input type="checkbox"><textarea readonly>/gamerule commandBlockOutput false</textarea></div>
+            <div><button>x</button><textarea></textarea></div>
+            <div><button>x</button><textarea></textarea></div>
             <button>+</button>
         </div>
         <h2>La <i>one command</i> :</h2>
-        <input type="text" readonly="readonly" value="/summon minecraft:falling_block ~ ~1 ~ {BlockState:{Name:&quot;minecraft:redstone_block&quot;},Passengers:[{id:&quot;minecraft:falling_block&quot;,BlockState:{Name:&quot;minecraft:activator_rail&quot;}},{id:&quot;minecraft:command_block_minecart&quot;,Tags:[&quot;keyliesonecommand&quot;],Command:&quot;/gamerule commandBlockOutput false&quot;},{id:&quot;minecraft:command_block_minecart&quot;,Tags:[&quot;keyliesonecommand&quot;],Command:&quot;/setblock ~ ~-2 ~ minecraft:command_block{auto:1b,Command:\&quot;/fill ~ ~ ~ ~ ~2 ~ minecraft:air\&quot;} destroy&quot;},{id:&quot;minecraft:command_block_minecart&quot;,Tags:[&quot;keyliesonecommand&quot;],Command:&quot;/kill @e[tag=keyliesonecommand]&quot;}]}">
+        <textarea readonly>/summon minecraft:falling_block ~ ~1 ~ {BlockState:{Name:"minecraft:redstone_block"},Passengers:[{id:"minecraft:falling_block",BlockState:{Name:"minecraft:activator_rail"}}]}</textarea>
+        <hr>
         <script src="/home/script.js"></script>
     </body>
 </html>
