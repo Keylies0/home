@@ -19,10 +19,12 @@
             Taper les commandes à éxecuter dans les champs ci-dessous. La <i>one command</i> est générée tout en bas de la page.
         </p>
         <div>
-            <div><input type="checkbox"><textarea readonly>/gamerule commandBlockOutput false</textarea></div>
-            <div><button>x</button><textarea></textarea></div>
-            <div><button>x</button><textarea></textarea></div>
-            <button>+</button>
+            <div><input type="checkbox" checked><textarea id="command" readonly>/gamerule commandBlockOutput false</textarea></div>
+            <div><button id="del_command">x</button><textarea id="command"></textarea></div>
+            <div><button id="del_command">x</button><textarea id="command"></textarea></div>
+            <button id="add_command">+</button>
+            <div><input type="checkbox" checked><textarea id="command" readonly>/setblock ~ ~-2 ~ minecraft:command_block{auto:1b,Command:"/fill ~ ~ ~ ~ ~2 ~ minecraft:air"} destroy</textarea></div>
+            <div><input type="checkbox" checked><textarea id="command" readonly>/kill @e[tag=keyliesonecommand]</textarea></div>
         </div>
         <h2>La <i>one command</i> :</h2>
         <textarea readonly>/summon minecraft:falling_block ~ ~1 ~ {BlockState:{Name:"minecraft:redstone_block"},Passengers:[{id:"minecraft:falling_block",BlockState:{Name:"minecraft:activator_rail"}}]}</textarea>
