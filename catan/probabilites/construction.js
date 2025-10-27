@@ -56,7 +56,9 @@ for (let n_tr = 0; n_tr < 3; n_tr++) {
 
         const inpt = document.createElement("input");
         td.appendChild(inpt);
-        inpt.className = String(n_td) + " tuil" + String(n_tr) + " proba";
-        inpt.type = "number";
+        inpt.className = String(n_td) + " tuile" + String(n_tr) + " proba";
+        inpt.type = 'text';
+        inpt.inputMode = 'numeric';
+        inpt.pattern = '[0-9]*';
     }
 }
