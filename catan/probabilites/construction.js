@@ -1,64 +1,166 @@
-const ressources = [
+const RESSOURCES = [
     "Argile",
     "Blé",
     "Bois",
-    "Laine",
-    "Minerai",
-];
+    "Cailloux",
+    "Mouton",
+]
 
-const tbody_resultats = document.getElementById("tbody_resultats");
-const tbody_plateau   = document.getElementById("tbody_plateau");
+const FIGURINES = [
+    "",
+    "Colonie",
+    "Ville",
+]
 
+function creer_tableau_recap() {
+    const tbody = document.getElementById("recap");
 
-// Construction tableaux des résultats
-for (const r of ressources) {
-    const tr = tbody_resultats.appendChild(document.createElement("tr"));
-    tr.appendChild(document.createElement("td")).textContent = r;
-    tr.appendChild(document.createElement("td")).className = r + " P";
-    tr.appendChild(document.createElement("td")).className = r + " E";
+    let tr = document.createElement("tr");
+    tbody.appendChild(tr);
+
+    let td = document.createElement("td");
+    tr.appendChild(td);
+
+    for (let r of RESSOURCES) {
+        td = document.createElement("td");
+        tr.appendChild(td);
+
+        td.textContent = r;
+    }
+
+    tr = document.createElement("tr");
+    tbody.appendChild(tr);
+
+    td = document.createElement("td");
+    tr.appendChild(td);
+
+    td.textContent = "Probabilité";
+
+    for (let r of RESSOURCES) {
+        td = document.createElement("td");
+        tr.appendChild(td);
+
+        td.className = "proba " + r;
+    }
+
+    tr = document.createElement("tr");
+    tbody.appendChild(tr);
+
+    td = document.createElement("td");
+    tr.appendChild(td);
+
+    td.textContent = "Espérance";
+
+    for (let r of RESSOURCES) {
+        td = document.createElement("td");
+        tr.appendChild(td);
+
+        td.className = "esper " + r;
+    }
 }
 
 
-// Construction pions et tuiles
+function creer_plateau() {
+    const tr = document.getElementById("plateau");
 
-const tr = document.createElement("tr");
-tbody_plateau.appendChild(tr);
+    for (let i = 0; i < 7; i++) {
+        td = document.createElement("td");
+        tr.appendChild(td);
 
-for (let n_td = 0; n_td < 7; n_td++) {
-    const td = document.createElement("td");
+        table = document.createElement("table");
+        td.appendChild(table);
+
+        tbody = document.createElement("tbody");
+        table.appendChild(tbody);
+
+        colonie_3tuiles(tbody, i);
+    }
+}
+
+
+function colonie_3tuiles( tbody, i ) {
+    let tr = document.createElement("tr");
+    tbody.appendChild(tr);
+
+    let td = document.createElement("td");
     tr.appendChild(td);
 
     const slct = document.createElement("select");
     td.appendChild(slct);
-    slct.className = String(n_td) + " pion";
 
-    slct.appendChild(document.createElement("option")).textContent = "Aucune";
-    slct.appendChild(document.createElement("option")).textContent = "Colonie";
-    slct.appendChild(document.createElement("option")).textContent = "Ville";
+    slct.className = String(i) + " pion";
+
+    let optn;
+
+    for (let f of FIGURINES) {
+        optn = document.createElement("option");
+        slct.appendChild(optn);
+
+        optn.textContent = f;
+    }
+
+    tr = document.createElement("tr");
+    tbody.appendChild(tr);
+
+    td = document.createElement("td");
+    tr.appendChild(td);
+
+    const table = document.createElement("table")
+    td.appendChild(table);
+
+    const tbody_new = document.createElement("tbody");
+    table.appendChild(tbody_new);
+
+    trois_tuiles(tbody_new, i);
 }
 
-for (let n_tr = 0; n_tr < 3; n_tr++) {
-    const tr = document.createElement("tr");
-    tbody_plateau.appendChild(tr);
 
-    for (let n_td = 0; n_td < 7; n_td++) {
-        const td = document.createElement("td");
+function trois_tuiles( tbody, i ) {
+    let tr = document.createElement("tr");
+    tbody.appendChild(tr);
+
+    let td;
+    let slct;
+    let optn;
+
+    for (let j = 0; j < 3; j++) {
+        td = document.createElement("td");
         tr.appendChild(td);
 
-        const slct = document.createElement("select");
+        slct = document.createElement("select");
         td.appendChild(slct);
-        slct.className = String(n_td) + " tuile" + String(n_tr) + " rsrc";
 
-        slct.appendChild(document.createElement("option")).textContent = "Désert";
-        for (const r of ressources) {
-            slct.appendChild(document.createElement("option")).textContent = r;
+        optn = document.createElement("option");
+        slct.appendChild(optn);
+
+        optn.textContent = "Désert";
+
+        for (let r of RESSOURCES) {
+            optn = document.createElement("option");
+            slct.appendChild(optn);
+
+            optn.textContent = r;
         }
+    }
 
-        const inpt = document.createElement("input");
-        td.appendChild(inpt);
-        inpt.className = String(n_td) + " tuile" + String(n_tr) + " proba";
-        inpt.type = 'text';
-        inpt.inputMode = 'numeric';
-        inpt.pattern = '[0-9]*';
+    tr = document.createElement("tr");
+    tbody.appendChild(tr);
+
+    for (let j = 0; j < 3; j++) {
+        td = document.createElement("td");
+        tr.appendChild(td);
+
+        for (let r of RESSOURCES) {
+            input = document.createElement("input");
+            td.appendChild(input);
+
+            input.type = "text";
+            input.inputmode = "numeric";
+        }
     }
 }
+
+
+
+creer_tableau_recap();
+creer_plateau();
