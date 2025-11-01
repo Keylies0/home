@@ -121,9 +121,9 @@ function creer_intersection( i ) {
 
         slct = document.createElement("select");
         td.appendChild(slct);
-        slct.className = String(i) + " Ressource" + String(j);
+        slct.className = String(i) + " Ressource" + String(j) + " selectResrc";
 
-        for (const r of RESSOURCES) {
+        for (const r of ["Désert"].concat(RESSOURCES)) {
             optn = document.createElement("option");
             slct.appendChild(optn);
             optn.textContent = r;
@@ -137,7 +137,7 @@ function creer_intersection( i ) {
         td.appendChild(inpt);
         inpt.type = "text";
         inpt.inputMode = "numeric";
-        inpt.className = String(i) + " Probabilité " + String(j);
+        inpt.className = String(i) + " Probabilité" + String(j) + " inputProba";
     }
 
     return table;
