@@ -73,11 +73,25 @@ function filtrer_input() {
     this.value = this.value.replace(/[^0-9]/g, '');
 }
 
+function couleur_jeton() {
+    if (
+        this.value === '6'
+        || this.value === '8'
+    ) {
+        this.style.color = 'red';
+        this.style.fontWeight = 'bold';
+    }
+    else {
+        this.style.cssText = '';
+    }
+}
+
 // Programme effectue
 for (const s of ACTUALISER_SELECTS)
     s.addEventListener('change', calculer_resume);
 for (const i of ACTUALISER_INPUTS  ) {
     i.addEventListener('input' , calculer_resume);
     i.addEventListener('input' , filtrer_input  );
+    i.addEventListener('input' , couleur_jeton);
 }
 calculer_resume();

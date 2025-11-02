@@ -31,6 +31,7 @@ input, select {
 
 .stylecarre {
     aspect-ratio: 1/1;
+    font-size: 3em;
 }
 
 /* Pour la div #plateau (contenant les tables) */

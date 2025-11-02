@@ -84,7 +84,7 @@ function creer_input_jeton( i, j ) {
     input.classList.add('stylecarre');
     input.type        = 'texte';
     input.inputMode   = 'numeric';
-    input.placeholder = 'Valeur du jeton';
+    input.placeholder = 'Jeton';
     return input;
 }
 
