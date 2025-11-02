@@ -21,7 +21,7 @@ function creer_resume() {
 
 function creer_tr_ressources() {
     const tr = document.createElement('tr');
-    for (const r of [''].concat(RESSOURCES)) {
+    for (const r of [''].concat(RESSOURCES).concat(['🃏'])) {
         const td = document.createElement('td');
         tr.appendChild(td);
         td.textContent = r;
@@ -34,7 +34,7 @@ function creer_tr_txt( texte ) {
     const td = document.createElement('td');
     tr.appendChild(td);
     td.textContent = texte;
-    for (const r of RESSOURCES) {
+    for (const r of RESSOURCES.concat(['🃏'])) {
         const td = document.createElement('td');
         tr.appendChild(td);
         td.id = texte + r

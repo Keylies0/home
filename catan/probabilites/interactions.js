@@ -9,6 +9,7 @@ function calculer_resume() {
 }
 
 function calculer_probabilites() {
+    let JETONSCARTES = new Set();
     for (const r of RESSOURCES) {
         let JETONS = new Set();
         for (let i = 0; i < MAX_FIGURINES; i++) {
@@ -29,7 +30,13 @@ function calculer_probabilites() {
             proba += probabilites(jeton);
         const ProbabiliteRessource = document.getElementById('Probabilité' + r);
         ProbabiliteRessource.textContent = String(Math.round(100*proba)) + ' %';
+        JETONSCARTES = JETONSCARTES.union(JETONS);
     }
+    let probacartes = 0;
+    for (const jeton of JETONSCARTES)
+        probacartes += probabilites(jeton);
+    const ProbabiliteCartes = document.getElementById('Probabilité' + '🃏');
+    ProbabiliteCartes.textContent = String(Math.round(100*probacartes)) + ' %';
 }
 
 function probabilites( j ) {
@@ -43,6 +50,7 @@ function probabilites( j ) {
 }
 
 function calculer_esperances() {
+    let espercartes = 0;
     for (const r of RESSOURCES) {
         let esper = 0;
         for (let i = 0; i < MAX_FIGURINES; i++) {
@@ -60,7 +68,10 @@ function calculer_esperances() {
         }
         const EsperanceRessource = document.getElementById('Espérance' + r);
         EsperanceRessource.textContent = String(esper.toFixed(2));
+        espercartes += esper;
     }
+    const EsperanceCartes = document.getElementById('Espérance' + '🃏');
+    EsperanceCartes.textContent = String(espercartes.toFixed(2));
 }
 
 function scalaire(figurine) {
