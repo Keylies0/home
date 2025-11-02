@@ -1,4 +1,4 @@
-body.clair, body.sombre select, body.sombre input {
+body.clair, body.clair select, body.clair input {
     color: black;
     background-color: white;
 
@@ -7,7 +7,7 @@ body.clair, body.sombre select, body.sombre input {
     }
 }
 
-body.sombre select, body.sombre input {
+body.clair select, body.clair input {
     background-color: rgb(235, 235, 235);
     border: none;
     border-radius: 15% 5%;
