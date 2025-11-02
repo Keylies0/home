@@ -9,6 +9,8 @@ body.clair, body.sombre select, body.sombre input {
 
 body.sombre select, body.sombre input {
     background-color: rgb(235, 235, 235);
+    border: none;
+    border-radius: 15% 5%;
 }
 
 
