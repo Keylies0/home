@@ -5,8 +5,11 @@ const MAX_TUILES_INTERSECTION = 3;
 
 // Fonctions
 function creer_plateau() {
-    for (let i = 0; i < MAX_FIGURINES; i++)
+    for (let i = 0; i < MAX_FIGURINES; i++) {
+        const hr = document.createElement('hr');
+        balise_plateau.appendChild(hr);
         balise_plateau.appendChild(creer_propriete(i));
+    }
 }
 
 function creer_propriete( i ) {
