@@ -23,9 +23,14 @@ td {
 
 /* Pour les éléments de type input/select */
 input, select {
+    text-align: center;
     width: 100%;
     max-width: 100%; /* Largeur max = 100% du conteneur parent */
     box-sizing: border-box; /* Inclut padding/border dans la largeur */
+}
+
+.stylecarre {
+    aspect-ratio: 1/1;
 }
 
 /* Pour la div #plateau (contenant les tables) */

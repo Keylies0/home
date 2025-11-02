@@ -6,11 +6,9 @@ const MAX_TUILES_INTERSECTION = 3;
 // Fonctions
 function creer_plateau() {
     for (let i = 0; i < MAX_FIGURINES; i++) {
-        const hr0 = document.createElement('hr');
-        balise_plateau.appendChild(hr0);
+        const hr = document.createElement('hr');
+        balise_plateau.appendChild(hr);
         balise_plateau.appendChild(creer_propriete(i));
-        const hr1 = document.createElement('hr');
-        balise_plateau.appendChild(hr1);
     }
 }
 
@@ -31,7 +29,7 @@ function creer_tr_select_figurine( i ) {
     td.appendChild(select);
     select.id = "Figurine" + String(i);
     select.classList.add('actualiser');
-    for (const f of [''].concat(FIGURINES)) {
+    for (const f of ['Colonie ou Ville ?'].concat(FIGURINES)) {
         const option = document.createElement('option');
         select.appendChild(option);
         option.textContent = f;
@@ -70,6 +68,7 @@ function creer_select_ressource( i, j ) {
     const select = document.createElement('select');
     select.id = 'Figurine' + String(i) + 'Ressource' + String(j);
     select.classList.add('actualiser');
+    select.classList.add('stylecarre');
     for (const r of ['🏜️'].concat(RESSOURCES)) {
         const option = document.createElement('option');
         select.appendChild(option);
@@ -80,10 +79,12 @@ function creer_select_ressource( i, j ) {
 
 function creer_input_jeton( i, j ) {
     const input = document.createElement('input');
-    input.id        = 'Figurine' + String(i) + 'Jeton' + String(j);
+    input.id          = 'Figurine' + String(i) + 'Jeton' + String(j);
     input.classList.add('actualiser');
-    input.type      = 'texte';
-    input.inputMode = 'numeric';
+    input.classList.add('stylecarre');
+    input.type        = 'texte';
+    input.inputMode   = 'numeric';
+    input.placeholder = 'Valeur du jeton';
     return input;
 }
 

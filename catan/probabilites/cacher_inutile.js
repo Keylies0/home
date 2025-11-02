@@ -33,8 +33,11 @@ for (let i = 0; i < MAX_FIGURINES; i++) {
     const Figurinei = 'Figurine' + String(i);
     const figurine = document.getElementById(Figurinei);
     figurine.addEventListener('change', function() {
-        if (this.value === '') cacher_ressources_jetons(i);
-        else                   afficher_ressources_jetons(i);
+        if (
+            this.value != 'Colonie'
+            && this.value != 'Ville'
+        )    cacher_ressources_jetons(i);
+        else afficher_ressources_jetons(i);
     });
     for (let j = 0; j < MAX_TUILES_INTERSECTION; j++) {
         const ressource = document.getElementById(Figurinei + 'Ressource' + String(j));
