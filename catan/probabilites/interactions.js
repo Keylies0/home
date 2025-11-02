@@ -14,7 +14,7 @@ function calculer_probabilites() {
         for (let i = 0; i < MAX_FIGURINES; i++) {
             const Figurinei = 'Figurine' + String(i);
             const figurine = document.getElementById(Figurinei);
-            if (figurine.value != '') {
+            if (figurine.value === 'Colonie' || figurine.value === 'Ville') {
                 for (let j = 0; j < MAX_TUILES_INTERSECTION; j++) {
                     const ressource = document.getElementById(Figurinei + 'Ressource' + String(j));
                     if (ressource.value === r) {
