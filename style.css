@@ -7,6 +7,11 @@ body.clair, body.sombre select, body.sombre input {
     }
 }
 
+body.sombre select, body.sombre input {
+    background-color: rgb(235, 235, 235);
+}
+
+
 body.sombre, body.sombre select, body.sombre input {
     color: rgb(220, 220, 220);
     background-color: rgb(20, 20, 20);
@@ -14,4 +19,10 @@ body.sombre, body.sombre select, body.sombre input {
     a, a:link, a:visited, a:focus, a:hover, a:active {
         color: rgb(0, 200, 200);
     }
+}
+
+body.sombre select, body.sombre input {
+    background-color: rgb(40, 40, 40);
+    border: none;
+    border-radius: 15% 5%;
 }
