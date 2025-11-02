@@ -29,6 +29,7 @@ function creer_tr_select_figurine( i ) {
     td.appendChild(select);
     select.id = "Figurine" + String(i);
     select.classList.add('actualiser');
+    select.classList.add('figurine');
     for (const f of ['Colonie ou Ville ?'].concat(FIGURINES)) {
         const option = document.createElement('option');
         select.appendChild(option);

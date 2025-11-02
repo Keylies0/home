@@ -29,6 +29,12 @@ input, select {
     box-sizing: border-box; /* Inclut padding/border dans la largeur */
 }
 
+.figurine {
+    aspect-ratio: 5/1;
+    font-size: 2em;
+    font-weight: bold;
+}
+
 .stylecarre {
     aspect-ratio: 1/1;
     font-size: 3em;
