@@ -1,4 +1,4 @@
-body.clair {
+body.clair, body.sombre select, body.sombre input {
     color: black;
     background-color: white;
 
@@ -7,7 +7,7 @@ body.clair {
     }
 }
 
-body.sombre {
+body.sombre, body.sombre select, body.sombre input {
     color: rgb(220, 220, 220);
     background-color: rgb(20, 20, 20);
 
