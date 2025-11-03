@@ -1,0 +1,36 @@
+/* Réinitialisation des marges/padding par défaut */
+body, html {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; /* Empêche le défilement horizontal */
+}
+
+/* Pour les tables et éléments internes */
+table {
+    table-layout: fixed; /* Force le respect des largeurs */
+    width: 100%;
+    border-collapse: collapse; /* Évite les espaces entre les cellules */
+}
+
+td {
+    padding: 4px;
+    white-space: nowrap; /* Empêche la coupure ou le retour à la ligne */
+    font-size: clamp(0.7rem, 2vw, 1rem); /* Taille minimale: 0.7rem, idéale: 2vw, maximale: 1rem */
+    overflow: hidden; /* Empêche le débordement dans les cellules */
+}
+
+td:first-child {
+    width: 30px;
+}
+
+/* Pour les éléments de type input/select */
+textarea {
+    width: 100%;
+    max-width: 100%; /* Largeur max = 100% du conteneur parent */
+    box-sizing: border-box; /* Inclut padding/border dans la largeur */
+}
+
+#onecommand {
+    height: 100vh;
+    border-radius: 0;
+}

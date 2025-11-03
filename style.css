@@ -1,4 +1,4 @@
-body.clair, body.clair select, body.clair input {
+body.clair, body.clair select, body.clair input, body.clair textarea {
     color: black;
     background-color: white;
 
@@ -7,14 +7,14 @@ body.clair, body.clair select, body.clair input {
     }
 }
 
-body.clair select, body.clair input {
+body.clair select, body.clair input, body.clair textarea {
     background-color: rgb(235, 235, 235);
     border: none;
     border-radius: 15% 5%;
 }
 
 
-body.sombre, body.sombre select, body.sombre input {
+body.sombre, body.sombre select, body.sombre input, body.sombre textarea {
     color: rgb(220, 220, 220);
     background-color: rgb(20, 20, 20);
 
@@ -23,7 +23,7 @@ body.sombre, body.sombre select, body.sombre input {
     }
 }
 
-body.sombre select, body.sombre input {
+body.sombre select, body.sombre input, body.sombre textarea {
     background-color: rgb(40, 40, 40);
     border: none;
     border-radius: 15% 5%;
