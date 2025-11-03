@@ -25,6 +25,7 @@ function creer_tr_ressources() {
         const td = document.createElement('td');
         tr.appendChild(td);
         td.textContent = r;
+        td.classList.add('resultat');
     }
     return tr;
 }
@@ -33,11 +34,13 @@ function creer_tr_txt( texte ) {
     const tr = document.createElement('tr');
     const td = document.createElement('td');
     tr.appendChild(td);
-    td.textContent = texte;
+    if (texte === 'Espérance') td.textContent = 'Moyenne'
+    else td.textContent = texte;
     for (const r of RESSOURCES.concat(['🃏'])) {
         const td = document.createElement('td');
         tr.appendChild(td);
         td.id = texte + r
+        td.classList.add('resultat');
     }
     return tr;
 }

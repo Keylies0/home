@@ -13,6 +13,7 @@ table {
 }
 
 td {
+    text-align: center;
     padding: 4px;
     white-space: nowrap; /* Empêche la coupure ou le retour à la ligne */
     font-size: clamp(0.7rem, 2vw, 1rem); /* Taille minimale: 0.7rem, idéale: 2vw, maximale: 1rem */
@@ -20,31 +21,9 @@ td {
 }
 
 /* Pour les éléments de type input/select */
-input, select {
+input {
     text-align: center;
     width: 100%;
     max-width: 100%; /* Largeur max = 100% du conteneur parent */
     box-sizing: border-box; /* Inclut padding/border dans la largeur */
-}
-
-.figurine {
-    aspect-ratio: 5/1;
-    font-size: 2em;
-    font-weight: bold;
-}
-
-.stylecarre {
-    aspect-ratio: 1/1;
-    font-size: 3em;
-}
-
-/* Pour la div #plateau (contenant les tables) */
-#plateau {
-    width: 100%;
-    overflow-x: auto; /* Défilement horizontal uniquement si nécessaire */
-    max-width: 100vw; /* Largeur max = 100% de la fenêtre */
-}
-
-.resultat {
-    font-size: 1em;
 }
