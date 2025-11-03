@@ -25,8 +25,8 @@ td:first-child {
 
 /* Pour les éléments de type input/select */
 textarea {
-    width: 100%;
-    max-width: 100%; /* Largeur max = 100% du conteneur parent */
+    width: 95%;
+    max-width: 95%; /* Largeur max = 95% du conteneur parent */
     box-sizing: border-box; /* Inclut padding/border dans la largeur */
 }
 
