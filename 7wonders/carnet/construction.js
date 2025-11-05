@@ -1,17 +1,14 @@
 // Constantes
 const tableau = document.getElementById('tableau');
-const MAX_JOUEURS = 5;
+const MAX_JOUEURS = 7;
 const SCORES = [
-    '🍃',
-    '⚡',
-    '🍂',
+    '🏛️',
+    '🪙',
+    '⚔️',
+    '🟦',
+    '🟨',
     '🟩',
-    '🪵',
-    '🏜️',
-    '⛰️',
-    '⛰️',
-    '⛰️',
-    '🐻',
+    '🟪',
 ]
 
 // Fonctions
