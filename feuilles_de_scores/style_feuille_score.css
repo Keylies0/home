@@ -1,0 +1,24 @@
+td {
+    text-align: center;
+    box-sizing: border-box;
+    padding: 5px;
+    border: 1px solid gray;
+}
+
+input {
+    box-sizing: border-box;
+    width: 100px;
+    text-align: center;
+}
+
+#additionner {
+    box-sizing: border-box;
+    margin: 10px;
+}
+
+#defiler {
+    box-sizing: border-box;
+    padding: 5px;
+    overflow-x: auto;
+    overflow-y: hidden;
+}

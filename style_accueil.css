@@ -1,0 +1,9 @@
+h1 {
+    font-size: 130%;
+    font-weight: bold;
+}
+
+section, ul, li {
+    box-sizing: border-box;
+    padding: 4px;
+}

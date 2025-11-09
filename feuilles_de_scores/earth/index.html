@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Keylies</title>
+        <link rel="stylesheet" href="/home/sombreclair.css">
+        <link rel="stylesheet" href="../style_feuille_score.css">
+        <link rel="icon" href="/home/favicon.svg">
+    </head>
+    <body class="sombre">
+        <a href="/home/">REVENIR SUR LA PAGE D'ACCUEIL</a>
+        <button id="btn_theme">Basculer vers le thème <b id="autre_theme">clair</b></button>
+        <hr>
+        Pour écrire un nombre <b>négatif</b> commencer par <b>0</b>.
+        <br>
+        <i>Exemple : Pour écrire −3 taper 03.</i>
+        <div id="defiler"><table id="feuille"></table></div>
+        <button id="additionner">Additionner</button>
+        <script src="/home/basculer_theme.js"></script>
+        <script src="../creer_feuille.js"></script>
+        <script src="../additionner.js"></script>
+        <script>
+            creer_feuille( 5, ['🍃', '⚡', '🍂', '🟩', '⛰️', '⛰️', '⛰️', '🐾'], '∑');
+            document.getElementById('additionner').addEventListener('click', () => { additionner(5); });
+        </script>
+        <script src="../special_input.js"></script>
+    </body>
+</html>
