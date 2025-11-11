@@ -8,7 +8,7 @@ function additionner( NBR_JOUEURS ) {
         SCORES = document.getElementsByClassName('score' + String(i));
         for (const SCORE of SCORES) {
             if (SCORE.value === '') nbr_vides++;
-            else somme += parseInt(SCORE.value);
+            else somme += isNaN(parseInt(SCORE.value)) ? 0 : parseInt(SCORE.value);
         }
         const td_somme = document.getElementById('somme' + String(i));
         if (nbr_vides != SCORES.length) td_somme.textContent = String(somme);

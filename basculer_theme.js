@@ -20,6 +20,7 @@ function theme_enregistre() {
         autre_theme.textContent = "sombre";
     }
     else {
+        localStorage.setItem("theme", "sombre"); 
         document.body.className = "sombre";
         autre_theme.textContent = "clair";
     }
