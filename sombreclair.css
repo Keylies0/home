@@ -68,7 +68,7 @@ body.sombre {
 }
 
 body.clair {
-    color: blakc;
+    color: black;
     background-color: white;
     a {
         color: blue;
@@ -104,4 +104,31 @@ button {
 
 input {
     border-radius: 7px 5px;
+}
+
+#zone_theme {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+#theme_conteneur {
+    width: 50px;
+    height: 19px;
+    background-color: gray;
+    border-radius: 10px;
+    position: relative;
+}
+
+#theme_joystick {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 2px;
+    display: none;
+    background-color: lightgray;
+    border-radius: 50%;
+    transition: left 0.3s ease;
 }

@@ -6,11 +6,11 @@
         <title>Keylies</title>
         <link rel="stylesheet" href="/home/sombreclair.css">
         <link rel="stylesheet" href="../style_feuille_score.css">
-        <link rel="icon" href="/home/favicon.svg">
+        <link rel="icon" href="/home/icon.svg">
     </head>
     <body class="sombre">
-        <a href="/home/">REVENIR SUR LA PAGE D'ACCUEIL</a>
-        <button id="btn_theme">Basculer vers le thème <b id="autre_theme">clair</b></button>
+        <a href="/home/">Revenir à la page d'accueil</a>
+        <div id="zone_theme">☀️<div id="theme_conteneur"><div id="theme_joystick"></div></div>🌘</div>
         <hr>
         Pour écrire un nombre <b>négatif</b> commencer par <b>0</b>.
         <br>
@@ -21,8 +21,8 @@
         <script src="../creer_feuille.js"></script>
         <script src="../additionner.js"></script>
         <script>
-            creer_feuille( 5, ['🍃', '⚡', '🍂', '🟩', '🏜️', '⛰️', '⛰️', '⛰️', '🐾'], '∑');
-            document.getElementById('additionner').addEventListener('click', () => { additionner(5); });
+            creer_feuille( 7, ['🏛️', '🪙', '⚔️', '🟦', '🟨', '🟩', '🟪'], '∑');
+            document.getElementById('additionner').addEventListener('click', () => { additionner(7); });
         </script>
         <script src="../special_input.js"></script>
     </body>
