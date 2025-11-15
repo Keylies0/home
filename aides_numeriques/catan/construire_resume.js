@@ -1,8 +1,6 @@
 const RESSOURCES = ['🪵', '🧱', '🐑', '🌾', '🪨'];
-let cartes = "";
-for (const r of RESSOURCES) cartes += r;
-const CARTES = cartes;
-const TITRES = ['Probabilité', 'Moyenne'];
+const CARTES = '⭐';
+const TITRES = ['🎲', '⚖️'];
 const resume = document.getElementById('resume');
 
 function construire_resume() {
