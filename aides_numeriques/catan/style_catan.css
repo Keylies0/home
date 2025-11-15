@@ -22,6 +22,10 @@ body.sombre #resume {
     width: 100%;
 }
 
+#plateau {
+    padding-top: 2px;
+}
+
 #plateau td {
     width: auto;
 }
@@ -44,4 +48,15 @@ input, select {
 
 td, input, select {
     text-align: center;
+}
+
+#plateau > table {
+    box-sizing: border-box;
+    border: 1px darkgray solid;
+}
+
+#precisions {
+    box-sizing: border-box;
+    padding: 5px;
+    line-height: 120%;
 }
